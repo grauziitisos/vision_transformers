@@ -725,7 +725,7 @@ def mobilevit_s(num_classes=1000, pretrained=False, device='cpu'):
             'https://docs-assets.developer.apple.com/ml-research/models/cvnets/classification/mobilevit_s.pt', map_location=torch.device(device)
         )
         model.load_state_dict(ckpt)
-
+        return model
     # Initialize new head only of classes != 1000.
     if num_classes != 1000:
         print('Initializing new head')
