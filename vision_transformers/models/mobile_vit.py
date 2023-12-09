@@ -777,9 +777,9 @@ def mobilevit_xxs(num_classes=1000, pretrained=False):
     model_name = 'mobilevit_xxs'
     opts = Namespace(model_name = model_name)
     model = MobileViT(opts=opts)
-    if pretrained:
+    if False and pretrained:
         ckpt = torch.hub.load_state_dict_from_url(
-            'https://docs-assets.developer.apple.com/ml-research/models/cvnets/classification/mobilevit_xxs.pt'
+            'https://docs-assets.developer.apple.com/ml-research/models/cvnets/classification/mobilevit_xxs.pt', map_location=torch.device(device)
         )
         model.load_state_dict(ckpt)
 
