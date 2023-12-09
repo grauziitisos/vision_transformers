@@ -773,7 +773,7 @@ def mobilevit_mini(num_classes=1000, pretrained=False):
         )
     return model
 
-def mobilevit_xxs(num_classes=1000, pretrained=False):
+def mobilevit_xxs(num_classes=1000, pretrained=False, device='cpu'):
     model_name = 'mobilevit_xxs'
     opts = Namespace(model_name = model_name)
     model = MobileViT(opts=opts)
