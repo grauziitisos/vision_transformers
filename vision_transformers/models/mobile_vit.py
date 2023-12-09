@@ -719,6 +719,7 @@ def mobilevit_s(num_classes=1000, pretrained=False, device='cpu'):
     model = MobileViT(opts=opts)
     print(pretrained)
     print(opts)
+    exit()
     if pretrained:
         ckpt = torch.hub.load_state_dict_from_url(
             'https://docs-assets.developer.apple.com/ml-research/models/cvnets/classification/mobilevit_s.pt'
