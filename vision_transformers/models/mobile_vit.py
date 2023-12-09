@@ -720,9 +720,9 @@ def mobilevit_s(num_classes=1000, pretrained=False, device='cpu'):
     print(pretrained)
     print(opts)
     #exit()
-    if False and pretrained:
+    if pretrained:
         ckpt = torch.hub.load_state_dict_from_url(
-            'https://docs-assets.developer.apple.com/ml-research/models/cvnets/classification/mobilevit_s.pt'
+            'https://docs-assets.developer.apple.com/ml-research/models/cvnets/classification/mobilevit_s.pt', map_location=torch.device('cpu')
         )
         model.load_state_dict(ckpt,  map_location=torch.device(device))
 
